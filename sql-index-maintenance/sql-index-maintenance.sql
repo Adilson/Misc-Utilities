@@ -99,12 +99,3 @@ BEGIN
 		PRINT ''
 	END
 END
-
---ALTER INDEX [PK_DocumentType] ON [DocumentType] REBUILD WITH (ONLINE = ON) 
---ALTER INDEX [IX_USER_STATISTICS_USER] ON [UserStatistics] REORGANIZE
-
-----Reorganize UserCredential, IX_UserCredential_Identifier...
---ALTER INDEX [IX_UserCredential_Identifier] ON [UserCredential] REORGANIZE
- 
-----Rebuild DocumentType, PK_DocumentType...
---ALTER INDEX [PK_DocumentType] ON [DocumentType] REBUILD WITH (ONLINE = ON) 
