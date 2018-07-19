@@ -1,9 +1,8 @@
 SET NOCOUNT ON
 
 
-
-
 DECLARE @NoExecute BIT = 0
+DECLARE @Enterprise BIT = 0
 
 DECLARE @Idx TABLE (
 	TableName VARCHAR(200),
@@ -93,7 +92,9 @@ BEGIN
 	ELSE
 	BEGIN
 		PRINT '--Rebuild ' + @TableName + ', ' + @IndexName + '...'
-		SET @SQL = N'ALTER INDEX [' + @IndexName + '] ON [' + @TableName + '] REBUILD WITH (ONLINE = ON) '
+		SET @SQL = N'ALTER INDEX [' + @IndexName + '] ON [' + @TableName + '] REBUILD'
+		if @Enterprise = 1
+			SET @SQL = @SQL + 'WITH (ONLINE = ON)'
 		IF @NoExecute = 1
 			PRINT @SQL
 		ELSE

@@ -1,0 +1,13 @@
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\bin\release\netcoreapp2.0\osx-x64\libhostpolicy.dylib
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\bin\release\netcoreapp2.0\osx-x64\libhostfxr.dylib
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\bin\release\netcoreapp2.0\osx-x64\AvaloniaApplication1
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\bin\release\netcoreapp2.0\osx-x64\AvaloniaApplication1.deps.json
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\bin\release\netcoreapp2.0\osx-x64\AvaloniaApplication1.runtimeconfig.json
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\bin\release\netcoreapp2.0\osx-x64\AvaloniaApplication1.runtimeconfig.dev.json
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\bin\release\netcoreapp2.0\osx-x64\AvaloniaApplication1.dll
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\bin\release\netcoreapp2.0\osx-x64\AvaloniaApplication1.pdb
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\obj\release\netcoreapp2.0\osx-x64\AvaloniaApplication1.csproj.CoreCompileInputs.cache
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\obj\release\netcoreapp2.0\osx-x64\AvaloniaApplication1.AssemblyInfoInputs.cache
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\obj\release\netcoreapp2.0\osx-x64\AvaloniaApplication1.AssemblyInfo.cs
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\obj\release\netcoreapp2.0\osx-x64\AvaloniaApplication1.dll
+C:\Projetos\Adilson-GitHub\Misc-Utilities\avalonia-test\AvaloniaApplication1\AvaloniaApplication1\obj\release\netcoreapp2.0\osx-x64\AvaloniaApplication1.pdb
