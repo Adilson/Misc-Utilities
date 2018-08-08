@@ -1,0 +1,28 @@
+function extractMinIpMask(ip1, ip2)
+{
+	var ip1blocks = ip1.split('.');
+	var ip2blocks = ip2.split('.');
+	var maskBlocks = [];
+	var length = 0;
+
+	for (var i=0; i<4; i++)
+	{
+		var block1 = ip1blocks[i];
+		var block2 = ip2blocks[i];
+		if (block1 == block2)
+			maskBlocks.push(block1);
+		else
+		{
+			var andBlocks = (+block1 & +block2).toString();
+			maskBlocks.push(andBlocks);
+			andBlocks = (+andBlocks).toString(2).padStart(8,'0');
+			length += (andBlocks.lastIndexOf(1) + 1);
+			while (maskBlocks.length < 4)
+				maskBlocks.push('0');
+			break;
+		}
+
+		length+=8;
+	}
+	return maskBlocks.join('.')+'/'+length.toString();
+}

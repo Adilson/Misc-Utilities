@@ -41,3 +41,21 @@ outer apply (
 	where AttributeID & CONVERT(INT, so.value) <> 0
 ) att
 where o.object_id = object_id(@ProcName)
+
+
+select s.plan_handle, h.query_plan, T.text, att.Names
+from sys.dm_exec_query_stats s
+cross apply sys.dm_exec_query_plan(s.plan_handle) h
+cross apply (
+	select * from sys.dm_exec_plan_attributes(s.plan_handle) a
+	where a.attribute = 'set_options'
+) so
+outer apply (
+	select STRING_AGG(Name, ', '+CHAR(13)+CHAR(10)) Names
+	from @Attributes
+	where AttributeID & CONVERT(INT, so.value) <> 0
+) att
+outer apply (
+	select text from sys.dm_exec_sql_text(s.sql_handle)
+ ) T
+ order by text desc
