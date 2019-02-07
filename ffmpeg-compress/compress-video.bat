@@ -1,0 +1,1 @@
+ffmpeg -i %1 -vcodec h264 -acodec aac %HOMEPATH%\Desktop\CompressedVideo_%DATE:~6,4%%DATE:~3,2%%DATE:~0,2%_%TIME:~0,2%%TIME:~3,2%.mp4
