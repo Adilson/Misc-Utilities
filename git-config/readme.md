@@ -12,11 +12,11 @@ These lines set VS Code as Git default editor and merge & diff tool
     editor = code --wait
 [merge]
     tool = vscode
-[mergetool "code"]
+[mergetool "vscode"]
     cmd = code --wait $MERGED
 [diff]
     tool = vscode
-[difftool "code"]
+[difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
 ```
 
