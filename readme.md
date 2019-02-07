@@ -13,3 +13,6 @@ Some scripts, little programs or any kind of "programmer solution" for daily pro
 - [sql-query-reflection](sql-query-reflection/): SQL Server code snippet which generates the columns definition for a given query;
 - [sql-hanging-queries-inspect](sql-hanging-queries-inspect/): SQL Server query for bad performance query analysis
 - [sql-running-queries](sql-running-queries/): SQL Server query which lists current running queries
+
+## Bash & cmd
+- [git-config](git-config/): helpful stuff for speed up Git utilization
