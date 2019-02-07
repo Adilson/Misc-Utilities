@@ -1,6 +1,6 @@
 SET NOCOUNT ON
 
-DECLARE @NoExecute BIT = 0
+DECLARE @NoExecute BIT = 1
 
 DECLARE @Idx TABLE (
 	TableName VARCHAR(200),
@@ -40,7 +40,7 @@ inner join (
 	INNER JOIN sys.indexes AS i ON (i.index_id > 0 and i.is_hypothetical = 0) AND (i.object_id=tbl.object_id)
 	INNER JOIN sys.dm_db_index_physical_stats(DB_ID(), NULL, NULL, NULL, 'LIMITED') AS fi ON fi.object_id=CAST(i.object_id AS int) AND fi.index_id = CAST(i.index_id AS int)
 ) IXS on IX.object_id = IXS.object_id and IX.index_id = IXS.index_id
-where IXS.page_count < 10240 and IXS.page_count > 15
+where IXS.page_count < 102400 and IXS.page_count > 15
 order by AverageFragmentation desc
 
 
