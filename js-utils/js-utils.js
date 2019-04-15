@@ -79,3 +79,14 @@ const copyToClipboard = str => {
     document.execCommand('copy');
     document.body.removeChild(el);
 };
+
+/**
+ * Creates a Random ID formatted as a GUID (12fa12fa-58fa-45af-45af-12af58af12fa)
+ */
+const fakeGuid = ()=>[2,1,1,1,3].map(c=>[...Array(c)].reduce(a => a+=(((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1), '')).join('-');
+
+
+/**
+ * Parses args array as an object (--x 1 --y 'a b' --s1 --s2) => {x:1,y'a b',s1,s2}
+ */
+const getCmdArgs = ()=> ((scriptArgs,tr) => scriptArgs.reduce((a,c)=> (c[0] == '-' ? (a[0][tr(c)]=undefined,a[1]=tr(c)) : (a[0][a[1]] = (a[0][a[1]] ? [a[0][a[1]],c].flat() : c) ,a) , [{},''])))(process.argv.slice(2),s=>s.replace(/^\-+/gi,''));

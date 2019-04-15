@@ -12,6 +12,11 @@ class App {
     private mountRoutes (): void {
         const router = express.Router();
         router.get('*', (req, res) => {
+            console.log({
+                url: req.url,
+                qs: req.query,
+                body: req.body
+            });
             res.json({
                 qs: req.query,
                 url: req.url,
