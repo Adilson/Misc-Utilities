@@ -29,6 +29,7 @@ Here are some alias, very useful in a team environment
     acp = "!f() { git add .; git commit -m \"$1\"; git pull; git mergetool; git commit -m \"$1 - resolvido\"; git push; }; f"
     ckp = "!f() { git checkout -b $1 && git push --set-upstream origin $1; }; f"
     upd = "!f() { git remote update origin --prune; }; f"
+    brl = "!f() { git branch -l; }; f"
 ```
 
 Then you can do:
@@ -36,3 +37,4 @@ Then you can do:
 - ``` git acp "commit message" ``` to add all the files, commit your changes, fetch the remote chaings, open the mergetool for the conflicts and finally commit and push the merged version
 - ``` git ckp "new-branch" ``` to create a new branch and push it to the origin remote
 - ``` git upd ``` to update the list of remote branches
+- ``` git brl ``` to list the current local branches
