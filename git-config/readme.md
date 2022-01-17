@@ -30,6 +30,7 @@ Here are some alias, very useful in a team environment
     ckp = "!f() { git checkout -b $1 && git push --set-upstream origin $1; }; f"
     upd = "!f() { git remote update origin --prune; }; f"
     brl = "!f() { git branch -l; }; f"
+    bcl = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | grep "feature/" | xargs git del; git branch --merged ${1-master} | grep -v " ${1-master}$" | grep "hotfix/" | xargs git del; }; f"
 ```
 
 Then you can do:
