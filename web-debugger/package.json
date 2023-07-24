@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --build tsconfig.json",
-    "start": "npm run build && node dist/index.js"
+    "postbuild": "copy package.json dist\\package.json && cd dist && npm install --only=production",
+    "start": "npm run build && node dist\\index.js"
   },
   "keywords": [],
   "author": "",
