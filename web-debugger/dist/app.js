@@ -13,11 +13,11 @@ class App {
     mountRoutes() {
         const router = express_1.default.Router();
         router.get('*', (req, res) => {
-            console.log({
+            console.dir({
                 url: req.url,
                 qs: req.query,
                 body: req.body
-            });
+            }, { depth: 6 });
             res.json({
                 qs: req.query,
                 url: req.url,
@@ -25,11 +25,11 @@ class App {
             });
         });
         router.post('*', (req, res) => {
-            console.log({
+            console.dir({
                 url: req.url,
                 qs: req.query,
                 body: req.body
-            });
+            }, { depth: 6 });
             res.json({ message: 'ok' });
         });
         this.app.use('/', router);
